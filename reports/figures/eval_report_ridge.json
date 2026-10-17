@@ -1,0 +1,13 @@
+{
+    "model_name": "Ridge_Regression",
+    "target_version": "v1",
+    "run_id": "a5598995303f470ca0bf902a407b91e9",
+    "git_commit": "bd04b2d916933db1dd69c02793afd3b932508757",
+    "dvc_hash": "ad83e64c9df3ec44461e94fe98811107",
+    "metrics": {
+        "mae": 12348.08,
+        "rmse": 15130.58,
+        "r2": 0.9057
+    },
+    "acceptance_pass": true
+}

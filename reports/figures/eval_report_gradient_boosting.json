@@ -1,0 +1,13 @@
+{
+    "model_name": "GradientBoosting_Regressor",
+    "target_version": "v3",
+    "run_id": "1b998eb1e09d4913ac00bbe3fdaaef14",
+    "git_commit": "bd04b2d916933db1dd69c02793afd3b932508757",
+    "dvc_hash": "ad83e64c9df3ec44461e94fe98811107",
+    "metrics": {
+        "mae": 13829.4,
+        "rmse": 17136.26,
+        "r2": 0.879
+    },
+    "acceptance_pass": true
+}

@@ -1,0 +1,21 @@
+stages:
+  prepare:
+    cmd: python src/data_prep.py
+    deps:
+      - configs/config.yaml
+      - data/dataset.csv
+      - src/data_prep.py
+    outs:
+      - data/train.csv
+      - data/test.csv
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - configs/config.yaml
+      - data/train.csv
+      - data/test.csv
+      - src/train.py
+    outs:
+      - reports/figures/residual_plot_gradient_boosting.png
+      - reports/figures/feature_importance_gradient_boosting.png

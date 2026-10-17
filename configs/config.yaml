@@ -1,0 +1,46 @@
+# Configuration for House Price Prediction ML Pipeline
+experiment_name: "HousePricePrediction_Lab45"
+registered_model_name: "HousePriceModel"
+tracking_uri: "sqlite:///mlflow.db"
+
+data:
+  raw_path: "data/dataset.csv"
+  train_path: "data/train.csv"
+  test_path: "data/test.csv"
+  test_size: 0.2
+  random_state: 42
+  target: "SalePrice"
+  features:
+    - "OverallQual"
+    - "GrLivArea"
+    - "TotalBsmtSF"
+    - "GarageCars"
+    - "FullBath"
+    - "YearBuilt"
+
+acceptance_criteria:
+  min_r2: 0.85
+  max_rmse: 25000.0
+  max_mae: 20000.0
+
+models:
+  ridge:
+    model_name: "Ridge_Regression"
+    alpha: 1.0
+    intended_use: "Fast linear baseline model for benchmark comparison"
+  
+  random_forest:
+    model_name: "RandomForest_Regressor"
+    n_estimators: 120
+    max_depth: 8
+    min_samples_split: 4
+    random_state: 42
+    intended_use: "Nonlinear ensemble candidate capturing non-linear feature interactions"
+
+  gradient_boosting:
+    model_name: "GradientBoosting_Regressor"
+    n_estimators: 160
+    learning_rate: 0.08
+    max_depth: 5
+    random_state: 42
+    intended_use: "High performance boosted trees model optimized for lowest RMSE"
