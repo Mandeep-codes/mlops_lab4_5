@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Mac
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# MLflow
+mlruns/
+mlflow.db
+mlflow.db-journal
